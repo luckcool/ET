@@ -235,7 +235,7 @@ MonoBehaviour:
   PkgName: Main
   ResName: MainPanel
   UICodeType: 0
-  WindowOption: 0
+  WindowOption: 1024
   PanelLayer: 3
   PanelOption: 10
   PanelStackOption: 2
