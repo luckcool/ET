@@ -13,9 +13,10 @@ namespace ET.Client
             root.AddComponent<UIGlobalComponent>();
             root.AddComponent<UIComponent>();
             root.AddComponent<ResourcesLoaderComponent>();
+            root.AddComponent<FUIComponent>();
             root.AddComponent<PlayerComponent>();
             root.AddComponent<CurrentScenesComponent>();
-            
+            root.AddComponent<LocalizeComponent>();
             // 根据配置修改掉Main Fiber的SceneType
             SceneType sceneType = EnumHelper.FromString<SceneType>(globalComponent.GlobalConfig.AppType.ToString());
             root.SceneType = sceneType;

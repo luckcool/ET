@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="w1m7ibbg">
+  <resources>
+    <component id="w7760" name="Main.xml" path="/" exported="true"/>
+    <component id="w7761" name="Button1.xml" path="/"/>
+  </resources>
+  <publish name="" path="..\Unity\Assets\Bundles\FUI\Test" packageCount="2"/>
+</packageDescription>

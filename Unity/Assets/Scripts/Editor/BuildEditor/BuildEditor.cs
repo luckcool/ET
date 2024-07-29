@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using FUIEditor;
+using UnityEditor;
 using UnityEngine;
 using YooAsset;
 
@@ -120,6 +121,11 @@ namespace ET
             {
                 ToolsEditor.Proto2CS();
                 return;
+            }
+            
+            if (GUILayout.Button("GenFUICode"))
+            {
+                FUICodeSpawner.FUICodeSpawn();
             }
 
             GUILayout.Space(5);

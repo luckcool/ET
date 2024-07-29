@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using YooAsset;
@@ -66,6 +67,35 @@ namespace ET.Client
             return (T)((AssetHandle)handler).AssetObject;
         }
 
+        public static T LoadAsset<T>(this ResourcesLoaderComponent self, string location) where T : UnityEngine.Object
+        {
+            HandleBase handler;
+            if (!self.handlers.TryGetValue(location, out handler))
+            {
+                handler = self.package.LoadAssetSync<T>(location);
+
+                self.handlers.Add(location, handler);
+            }
+
+            return (T)((AssetHandle)handler).AssetObject;
+        }
+
+        public static async ETTask LoadAssetAsync(this ResourcesLoaderComponent self, string location, Type type, Action<object> callback)
+        {
+            using CoroutineLock coroutineLock = await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.ResourcesLoader, location.GetHashCode());
+            HandleBase handler;
+            if (!self.handlers.TryGetValue(location, out handler))
+            {
+                handler = self.package.LoadAssetAsync(location, type);
+
+                await handler.Task;
+                
+                self.handlers.Add(location, handler);
+            }
+
+            callback(((AssetHandle)handler).AssetObject);
+        }
+        
         public static async ETTask<Dictionary<string, T>> LoadAllAssetsAsync<T>(this ResourcesLoaderComponent self, string location) where T : UnityEngine.Object
         {
             using CoroutineLock coroutineLock = await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.ResourcesLoader, location.GetHashCode());
