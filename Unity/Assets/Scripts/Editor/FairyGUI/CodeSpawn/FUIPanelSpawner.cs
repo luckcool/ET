@@ -16,7 +16,7 @@ namespace FUIEditor
                 Directory.CreateDirectory(fileDir);
             }
             
-            string componentName = componentInfo.NameWithoutExtension;
+            string componentName = $"{FUICodeSpawner.PackageInfos[componentInfo.PackageId].Name}{componentInfo.NameWithoutExtension}";
             string nameSpace = componentInfo.NameSpace;
             string filePath = "{0}/{1}.cs".Fmt(fileDir, componentName);
             if (File.Exists(filePath))
@@ -65,7 +65,7 @@ namespace FUIEditor
         public static void SpawnPanel(string packageName, ComponentInfo componentInfo)
         {
             string nameSpace = componentInfo.NameSpace;
-            string panelName = componentInfo.NameWithoutExtension;
+            string panelName = componentInfo.ComponentTypeName.Replace(FUICodeSpawner.ClassNamePrefix, "");
             
             string fileDir = "{0}/{1}".Fmt(FUICodeSpawner.ModelViewCodeDir, packageName);
             if (!Directory.Exists(fileDir))

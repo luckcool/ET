@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" remark="Main">
+  <controller name="c1" pages="0,,1," selected="1"/>
+  <displayList>
+    <text id="n0_b7fs" name="progress" xy="33,14" size="60,42" fontSize="30" color="#ff0000" autoSize="none" text=""/>
+    <text id="n1_b7fs" name="predict" xy="113,14" size="60,42" fontSize="30" color="#ff0000" autoSize="none" text=""/>
+    <text id="n2_b7fs" name="framecount" xy="193,14" size="60,42" fontSize="30" color="#ff0000" autoSize="none" text=""/>
+    <graph id="n4_b7fs" name="n4" xy="273,14" size="209,42" group="n7_b7fs" type="rect"/>
+    <text id="n3_b7fs" name="jumptocount" xy="273,14" size="209,42" group="n7_b7fs" fontSize="30" autoSize="none" text="" input="true" prompt="Jump to count"/>
+    <component id="n6_b7fs" name="btn_speed" src="b7fs1" fileName="Button1.xml" xy="657,14" group="n7_b7fs">
+      <Button title="X1"/>
+    </component>
+    <component id="n5_b7fs" name="btn_jumpto" src="b7fs1" fileName="Button1.xml" xy="502,14" size="135,42" group="n7_b7fs">
+      <Button title="Jump to"/>
+    </component>
+    <group id="n7_b7fs" name="n7" xy="273,14" size="484,42" advanced="true">
+      <gearDisplay controller="c1" pages="0"/>
+    </group>
+    <graph id="n8_b7fs" name="n8" xy="273,14" size="209,42" group="n11_b7fs" type="rect"/>
+    <text id="n9_b7fs" name="savename" xy="273,14" size="209,42" group="n11_b7fs" fontSize="30" autoSize="none" text="" input="true" prompt="Save name"/>
+    <component id="n10_b7fs" name="btn_save" src="b7fs1" fileName="Button1.xml" xy="502,14" size="183,42" group="n11_b7fs">
+      <Button title="Save Replay"/>
+    </component>
+    <group id="n11_b7fs" name="n11" xy="273,14" size="412,42" advanced="true">
+      <gearDisplay controller="c1" pages="1"/>
+    </group>
+  </displayList>
+</component>

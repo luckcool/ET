@@ -42,7 +42,7 @@ namespace ET.Client
         private static void LoadUIComponentInfoMap(this FUIComponent self)
         {
             self.UIComponentInfoMap = MongoHelper.FromJson<UIComponentInfoMap>(self.GetComponent<ResourcesLoaderComponent>()
-                    .LoadAsset<TextAsset>("Assets/Bundles/FUI/UIComponentInfoMap.json").text);
+                    .LoadAsset<TextAsset>("Assets/Bundles/FUI/UIMap/UIComponentInfoMap.json").text);
         }
 
         /// <summary>

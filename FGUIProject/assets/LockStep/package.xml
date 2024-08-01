@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="vn1qcc72">
+  <resources>
+    <component id="b7fs0" name="Login.xml" path="/" exported="true"/>
+    <component id="b7fs1" name="Button1.xml" path="/"/>
+    <component id="b7fs2" name="Lobby.xml" path="/" exported="true"/>
+    <component id="b7fs3" name="Room.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" path="..\Unity\Assets\Bundles\FUI\LockStep" packageCount="2"/>
+</packageDescription>

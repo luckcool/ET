@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" remark="Main">
+  <displayList>
+    <graph id="n0_b7fs" name="n0" xy="0,0" size="1920,1080" type="rect" lineSize="0" fillColor="#ff8e4a4a">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_b7fs" name="btn_login" src="b7fs1" fileName="Button1.xml" xy="795,611" size="330,100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="登录"/>
+    </component>
+    <graph id="n2_b7fs" name="n2" xy="795,369" size="330,80" type="rect" lineSize="0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <text id="n3_b7fs" name="input_account" xy="795,369" size="330,80" fontSize="30" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="请输入账号">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <graph id="n4_b7fs" name="n4" xy="795,488" size="330,80" type="rect" lineSize="0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <text id="n5_b7fs" name="input_password" xy="795,488" size="330,80" fontSize="30" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="请输入密码">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

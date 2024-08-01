@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" remark="Main">
+  <displayList>
+    <text id="n0_b7fs" name="n0" xy="0,0" size="289,162" fontSize="30" color="#ffffff" text="Help:&#xA;1. Mouse Right Move&#xA;2. R Reload Dll&#xA;3. T Transfer Map">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+  </displayList>
+</component>

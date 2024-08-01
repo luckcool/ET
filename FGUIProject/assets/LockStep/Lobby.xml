@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" remark="Main">
+  <displayList>
+    <graph id="n0_b7fs" name="n0" xy="0,0" size="1920,1080" type="rect" lineSize="0" fillColor="#ff8e4a4a">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_b7fs" name="btn_match" src="b7fs1" fileName="Button1.xml" xy="795,365" size="330,100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="Mach"/>
+    </component>
+    <graph id="n2_b7fs" name="n2" xy="795,498" size="330,80" type="rect">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n3_b7fs" name="btn_replay" src="b7fs1" fileName="Button1.xml" xy="795,615" size="330,100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="Replay"/>
+    </component>
+    <text id="n4_b7fs" name="input_replaypath" xy="795,498" size="330,80" fontSize="30" vAlign="middle" autoSize="none" text="" input="true" prompt="Enter text...">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

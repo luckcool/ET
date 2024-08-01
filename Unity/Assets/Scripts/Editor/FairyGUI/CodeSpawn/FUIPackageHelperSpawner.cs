@@ -19,14 +19,19 @@ namespace FUIEditor
                     {
                         UIComponentInfo ci = new UIComponentInfo();
                         ci.Id = packageComponentInfo.Id;
-                        ci.Name = packageComponentInfo.Name.Replace(".xml","");
+                        ci.Name = $"{packageInfo.Name}{packageComponentInfo.Name.Replace(".xml","")}";
                         ci.PackageName = packageInfo.Name;
                         ci.UsedPackage = new List<string>(packageComponentInfo.UsedPackages);
                         uiComponentInfoMap.Infos.Add(ci);
                     }
                 }
             }
-            string filePath = $"../Unity/Assets/Bundles/FUI/UIComponentInfoMap.json";
+            string filePath = $"../Unity/Assets/Bundles/FUI/UIMap/UIComponentInfoMap.json";
+            string dir = filePath.Substring(0, filePath.LastIndexOf('/'));
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
             File.WriteAllText(filePath, MongoHelper.ToJson(uiComponentInfoMap), Encoding.UTF8);
             uiComponentInfoMap = null;
         }

@@ -5,6 +5,11 @@ namespace ET.Client
 	public enum PanelId
 	{
 		Invalid = 0,
-		Main,
+		DemoHelp,
+		DemoLobby,
+		DemoLogin,
+		LockStepLogin,
+		LockStepLobby,
+		LockStepRoom,
 	}
 }

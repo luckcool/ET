@@ -11,7 +11,7 @@ namespace FUIEditor
     {
         public static void SpawnPanelSystem(string packageName, ComponentInfo componentInfo, VariableInfo variableInfo = null)
         {
-            string panelName = componentInfo.NameWithoutExtension;
+            string panelName = componentInfo.ComponentTypeName.Replace(FUICodeSpawner.ClassNamePrefix, "");
             string fileDir = "{0}/{1}".Fmt(FUICodeSpawner.HotfixViewCodeDir, packageName);
             if (!Directory.Exists(fileDir))
             {

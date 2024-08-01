@@ -21,7 +21,7 @@ namespace FUIEditor
 
             foreach (ComponentInfo componentInfo in FUICodeSpawner.MainPanelComponentInfos)
             {
-                sb.AppendLine($"\t\t{componentInfo.NameWithoutExtension},");
+                sb.AppendLine($"\t\t{FUICodeSpawner.PackageInfos[componentInfo.PackageId].Name}{componentInfo.NameWithoutExtension},");
             }
             
             sb.AppendLine("\t}"); 

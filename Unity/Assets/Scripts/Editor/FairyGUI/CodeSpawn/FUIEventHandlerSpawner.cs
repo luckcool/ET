@@ -8,7 +8,7 @@ namespace FUIEditor
     {
         public static void SpawnEventHandler(string packageName, ComponentInfo componentInfo)
         {
-            string panelName = componentInfo.NameWithoutExtension;
+            string panelName = componentInfo.ComponentTypeName.Replace(FUICodeSpawner.ClassNamePrefix, "");
             
             string fileDir = "{0}/{1}/Event".Fmt(FUICodeSpawner.HotfixViewCodeDir, packageName);
             if (!Directory.Exists(fileDir))

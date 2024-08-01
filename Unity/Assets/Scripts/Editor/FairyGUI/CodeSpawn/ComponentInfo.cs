@@ -131,7 +131,7 @@ namespace FUIEditor
             if (needExportClass)
             {
                 NameSpace = "{0}.{1}".Fmt(FUICodeSpawner.NameSpace, FUICodeSpawner.PackageInfos[PackageId].Name);
-                ComponentTypeName = "{0}{1}".Fmt(FUICodeSpawner.ClassNamePrefix, NameWithoutExtension);
+                ComponentTypeName = "{0}{1}{2}".Fmt(FUICodeSpawner.ClassNamePrefix, FUICodeSpawner.PackageInfos[PackageId].Name, NameWithoutExtension);
             }
             else
             {

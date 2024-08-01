@@ -33,7 +33,7 @@ namespace FUIEditor
             sb.AppendLine();
             sb.AppendLine("{");
             sb.AppendLine("\t[EnableClass]");
-            sb.AppendFormat("\tpublic partial class {0}{1}: {2}", FUICodeSpawner.ClassNamePrefix, componentInfo.NameWithoutExtension, componentInfo.ComponentClassName);
+            sb.AppendFormat("\tpublic partial class {0}: {1}", componentInfo.ComponentTypeName, componentInfo.ComponentClassName);
             sb.AppendLine();
             sb.AppendLine("\t{");
 
@@ -89,10 +89,10 @@ namespace FUIEditor
             sb.AppendLine();
             sb.AppendLine();
 
-            sb.AppendFormat("\t\tpublic static {0}{1} CreateInstance()", FUICodeSpawner.ClassNamePrefix, componentInfo.NameWithoutExtension);
+            sb.AppendFormat("\t\tpublic static {0} CreateInstance()", componentInfo.ComponentTypeName);
             sb.AppendLine();
             sb.AppendLine("\t\t{");
-            sb.AppendFormat("\t\t\treturn ({0}{1})UIPackage.CreateObject(\"{2}\", \"{1}\");", FUICodeSpawner.ClassNamePrefix, componentInfo.NameWithoutExtension, FUICodeSpawner.PackageInfos[componentInfo.PackageId].Name);
+            sb.AppendFormat("\t\t\treturn ({0})UIPackage.CreateObject(\"{1}\", \"{2}\");", componentInfo.ComponentTypeName, FUICodeSpawner.PackageInfos[componentInfo.PackageId].Name, componentInfo.NameWithoutExtension);
             sb.AppendLine();
             sb.AppendLine("\t\t}");
             sb.AppendLine();
@@ -135,7 +135,7 @@ namespace FUIEditor
                 Directory.CreateDirectory(dir);
             }
             
-            string filePath = "{0}/{1}{2}.cs".Fmt(dir, FUICodeSpawner.ClassNamePrefix, componentInfo.NameWithoutExtension);
+            string filePath = "{0}/{1}.cs".Fmt(dir, componentInfo.ComponentTypeName);
             using FileStream fs = new FileStream(filePath, FileMode.Create);
             using StreamWriter sw = new StreamWriter(fs);
             sw.Write(sb.ToString());

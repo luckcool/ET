@@ -10,7 +10,8 @@ namespace ET.Client
 		{
 			UIObjectFactory.Clear();
 			
-			TestBinder.BindAll();
+			DemoBinder.BindAll();
+			LockStepBinder.BindAll();
 		}
 	}
 }
