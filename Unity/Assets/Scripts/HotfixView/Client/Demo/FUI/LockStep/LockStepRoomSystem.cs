@@ -8,15 +8,16 @@ namespace ET.Client
         [EntitySystem]
         public static void Awake(this LockStepRoom self)
         {
+            self.room = self.Root().GetComponent<Room>();
         }
 
         public static void RegisterUIEvent(this LockStepRoom self)
         {
-            Room room = self.Room();
+            Room room = self.room;
             self.FUILockStepRoom.c1.selectedIndex = room.IsReplay ? 0 : 1;
             if (room.IsReplay)
             {
-                self.FUILockStepRoom.framecount.text = self.Room().Replay.FrameInputs.Count.ToString();
+                self.FUILockStepRoom.framecount.text = self.room.Replay.FrameInputs.Count.ToString();
                 self.FUILockStepRoom.btn_jumpto.onClick.Add(self.JumpReplay);
                 self.FUILockStepRoom.btn_speed.onClick.Add(self.OnReplaySpeedClicked);
             }
@@ -36,7 +37,7 @@ namespace ET.Client
 
         public static void BeforeUnload(this LockStepRoom self)
         {
-            Room room = self.Room();
+            Room room = self.room;
             if (room.IsReplay)
             {
                 self.FUILockStepRoom.btn_jumpto.onClick.Remove(self.JumpReplay);
@@ -55,7 +56,7 @@ namespace ET.Client
         [EntitySystem]
         private static void Update(this LockStepRoom self)
         {
-            Room room = self.Room();
+            Room room = self.room;
             if (self.frame != room.AuthorityFrame)
             {
                 self.frame = room.AuthorityFrame;
@@ -76,18 +77,18 @@ namespace ET.Client
         {
             string name = self.FUILockStepRoom.savename.text;
 
-            LSClientHelper.SaveReplay(self.Room(), name);
+            LSClientHelper.SaveReplay(self.room, name);
         }
 
         private static void JumpReplay(this LockStepRoom self)
         {
             int toFrame = int.Parse(self.FUILockStepRoom.jumptocount.text);
-            LSClientHelper.JumpReplay(self.Room(), toFrame);
+            LSClientHelper.JumpReplay(self.room, toFrame);
         }
 
         private static void OnReplaySpeedClicked(this LockStepRoom self)
         {
-            LSReplayUpdater lsReplayUpdater = self.Room().GetComponent<LSReplayUpdater>();
+            LSReplayUpdater lsReplayUpdater = self.room.GetComponent<LSReplayUpdater>();
             lsReplayUpdater.ChangeReplaySpeed();
             self.FUILockStepRoom.btn_speed.title = $"X{lsReplayUpdater.ReplaySpeed}";
         }

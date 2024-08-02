@@ -14,5 +14,7 @@ namespace ET.Client
 		
 		public int frame { get; set; }
 		public int predictFrame { get; set; }
+		
+		public Room room { get; set; }
 	}
 }
