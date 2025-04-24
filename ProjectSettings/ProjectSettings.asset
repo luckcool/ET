@@ -878,21 +878,24 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Android: UNITY;ENABLE_VIEW;TextMeshPro
-    EmbeddedLinux: TextMeshPro
-    GameCoreXboxOne: TextMeshPro
-    Nintendo Switch: TextMeshPro
-    PS4: TextMeshPro
-    PS5: TextMeshPro
-    QNX: TextMeshPro
-    ReservedCFE: TextMeshPro
+    Android: UNITY;ENABLE_VIEW;TextMeshPro;DOTWEEN
+    EmbeddedLinux: TextMeshPro;DOTWEEN
+    GameCoreScarlett: DOTWEEN
+    GameCoreXboxOne: TextMeshPro;DOTWEEN
+    LinuxHeadlessSimulation: DOTWEEN
+    Nintendo Switch: TextMeshPro;DOTWEEN
+    PS4: TextMeshPro;DOTWEEN
+    PS5: TextMeshPro;DOTWEEN
+    QNX: TextMeshPro;DOTWEEN
+    ReservedCFE: TextMeshPro;DOTWEEN
     Server: UNITY;ENABLE_VIEW
-    Standalone: UNITY;ENABLE_VIEW;INITED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;TextMeshPro
-    VisionOS: TextMeshPro
-    WebGL: UNITY;ENABLE_VIEW;TextMeshPro
-    XboxOne: TextMeshPro
-    iPhone: UNITY;ENABLE_VIEW;TextMeshPro
-    tvOS: TextMeshPro
+    Standalone: UNITY;ENABLE_VIEW;INITED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;TextMeshPro;DOTWEEN
+    VisionOS: TextMeshPro;DOTWEEN
+    WebGL: UNITY;ENABLE_VIEW;TextMeshPro;DOTWEEN
+    Windows Store Apps: DOTWEEN
+    XboxOne: TextMeshPro;DOTWEEN
+    iPhone: UNITY;ENABLE_VIEW;TextMeshPro;DOTWEEN
+    tvOS: TextMeshPro;DOTWEEN
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
