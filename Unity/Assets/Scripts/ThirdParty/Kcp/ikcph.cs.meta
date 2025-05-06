@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unity/Assets/Scripts/ThirdParty/Kcp/ikcpc.cs.meta
+guid: 3b65540023ecbeb449b24216d2e39a62
+========
 guid: 4aa1dc0343aff8a48ab0b69f55d696a8
+>>>>>>>> remotes/origin/release8.1:Unity/Assets/Scripts/ThirdParty/Kcp/ikcph.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unity/Assets/Scripts/Core/Fiber/MailBoxType.cs.meta
+guid: 75dc09ab9ad11c744ba5e2a9aba5d848
+========
 guid: 3b65540023ecbeb449b24216d2e39a62
+>>>>>>>> remotes/origin/release8.1:Unity/Assets/Scripts/ThirdParty/Kcp/ikcpc.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -1,15 +1,16 @@
 %YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
+%TAG !u! tag:yousandi.cn,2023:
 --- !u!1 &1280825893281702492
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 4485848951396658522}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: AllPopupViewParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,12 +42,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 8346046600543345883}
   - component: {fileID: 7197182180135680481}
   - component: {fileID: 1554684449751517160}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,10 +118,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 595133472388693405}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: AllViewParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,12 +156,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2278925076602994326}
   - component: {fileID: 2307132084641087563}
   - component: {fileID: 6899237840076690220}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: GMPanelSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,10 +342,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1833538788877208559}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: GMViewParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,16 +481,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2429927787863046564, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2429927787863046564, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
     - target: {fileID: 4692594876196754541, guid: 032a5520c2b71c349a684af0e1df8a9a,
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4692594876196754541, guid: 032a5520c2b71c349a684af0e1df8a9a,
         type: 3}
+    - target: {fileID: 4697457778055108537, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 4697457778055108537, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+    - target: {fileID: 5638834277191402381, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 5638834277191402381, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
     - target: {fileID: 6101961607973475274, guid: 032a5520c2b71c349a684af0e1df8a9a,
         type: 3}
       propertyPath: m_Name
       value: GMView
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343758355676736542, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3105410610807075551, guid: 0ba3ada64f6d6cb40be5ed1560038ed3,
+        type: 2}
+    - target: {fileID: 9025220468659699665, guid: 032a5520c2b71c349a684af0e1df8a9a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
